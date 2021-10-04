@@ -25,6 +25,11 @@ public class GiftCardTest {
         assertEquals(80,giftCard.getBalance(), 0.001);
     }
 
+    @Test
+    public void getTransactionFee(){
+        assertEquals(0, giftCard.getTransactionFee(200000), 0.001);
+    }
+
 
 
 }

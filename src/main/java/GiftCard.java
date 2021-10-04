@@ -17,4 +17,8 @@ public class GiftCard implements IChargeable {
     public void charge(double purchaseAmount) {
         this.balance-=purchaseAmount;
     }
+
+    public double getTransactionFee(double purchaseAmount) {
+        return 0;
+    }
 }
