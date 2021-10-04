@@ -10,7 +10,7 @@ public class DebitCardTest {
 
     @Before
     public void before(){
-        debitCard = new DebitCard();
+        debitCard = new DebitCard("Bobby Mack");
     }
 
     @Test

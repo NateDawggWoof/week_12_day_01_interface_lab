@@ -1,11 +1,10 @@
 import java.util.ArrayList;
 
-public class DebitCard implements IChargeable {
+public class DebitCard extends PaymentCard implements IChargeable {
 
-    private ArrayList<Double> charges;
 
-    public DebitCard() {
-        this.charges = new ArrayList<>();
+    public DebitCard( String name) {
+        super( name);
     }
 
     public double getTransactionFee(double purchaseAmount) {
@@ -15,14 +14,6 @@ public class DebitCard implements IChargeable {
     public void charge(double purchaseAmount) {
         this.charges.add(purchaseAmount);
 
-    }
-
-    public ArrayList<Double> getCharges() {
-        return charges;
-    }
-
-    public void setCharges(ArrayList<Double> charges) {
-        this.charges = charges;
     }
 
     public int countCharges() {
